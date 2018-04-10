@@ -1,0 +1,19 @@
+{
+  "name": "dimension-picker",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhikhatri/dimension-picker.git"
+  },
+  "author": "abhikhatri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhikhatri/dimension-picker/issues"
+  },
+  "private": true,
+  "homepage": "https://github.com/abhikhatri/dimension-picker#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

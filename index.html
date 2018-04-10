@@ -2,14 +2,22 @@
 <html>
 <head>
   <title>Dimension Picker</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  
+  <h1>Dimension Picker</h1>
   <div class="dimension-picker-wrapper">
-    <div class="dimension-picker-unhighlighted"></div>
-    <div class="dimension-picker-highlighted"> </div>
+    <div class="dimension-picker">
+      <div id="dimension-picker-mousecatcher"></div>
+      <div class="dimension-picker-unhighlighted"></div>
+      <div class="dimension-picker-highlighted"> </div>
+    </div>
+    <div class="dimension-picker-status">
+      1x1
+    </div>
   </div>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>
