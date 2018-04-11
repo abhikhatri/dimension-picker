@@ -8,7 +8,20 @@ $(document).ready(function() {
 	  var relativeX = (e.pageX - offset.left);
 	  var relativeY = (e.pageY - offset.top);
 
-	  console.log("X: " + relativeX + "  Y: " + relativeY);
+	  var highlightedCols= Math.ceil(relativeX/18);
+	  var highlightedRows= Math.ceil(relativeY/18);
+
+	  if(highlightedCols && highlightedRows){
+	  	$('#dimension-picker-highlighted').css({'width': highlightedCols + 'em', 'height': highlightedRows + 'em'});
+	  } else if(highlightedCols){
+	  	$('#dimension-picker-highlighted').css('width', highlightedCols + 'em');	
+	  } else if(highlightedRows){
+	  	$('#dimension-picker-highlighted').css('height', highlightedRows + 'em');	
+	  }
+		
+
+	  // To show the value of selected rows and columns
+	  $('#dimension-picker-status').html('<span>' + highlightedCols + 'x' + highlightedRows +'</span>');
 
 	});
 

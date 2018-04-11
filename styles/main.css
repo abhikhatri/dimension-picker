@@ -18,16 +18,17 @@ body{
 	height: 20em;
 	position: absolute;
 	z-index: 99;
+	user-select: none;
 }
 
-.dimension-picker-unhighlighted{
+#dimension-picker-unhighlighted{
 	width: 5em;
 	height: 5em;
 	position: relative;
 	background: url(/images/dimension-unhighlighted.png);
 }
 
-.dimension-picker-highlighted{
+#dimension-picker-highlighted{
 	width: 1em;
 	height: 1em;
 	position: absolute;
