@@ -8,15 +8,39 @@ $(document).ready(function() {
 	  var relativeX = (e.pageX - offset.left);
 	  var relativeY = (e.pageY - offset.top);
 
-	  var highlightedCols= Math.ceil(relativeX/18);
-	  var highlightedRows= Math.ceil(relativeY/18);
+	  var highlightedCols = Math.ceil(relativeX/18);
+	  var highlightedRows = Math.ceil(relativeY/18);
+
+	  var updateCurrentMatrix = function(updateElement, updatedValue){
+	  	
+	  	if(updatedValue <= 19 && updatedValue >= 5){
+	  		updatedValue = updatedValue+1;
+		  } else if(updatedValue < 5) {
+		  	updatedValue = 5;
+		  }
+
+		  switch(updateElement){
+	  		case 'row':
+	  			$('#dimension-picker-unhighlighted').css('height', updatedValue + 'em');
+	  			break;
+
+	  		case 'col':
+	  			$('#dimension-picker-unhighlighted').css('width', updatedValue + 'em');	
+	  			break;
+	  	}
+
+	  };
 
 	  if(highlightedCols && highlightedRows){
+	  	updateCurrentMatrix('row', highlightedRows);
+	  	updateCurrentMatrix('col', highlightedCols);
 	  	$('#dimension-picker-highlighted').css({'width': highlightedCols + 'em', 'height': highlightedRows + 'em'});
 	  } else if(highlightedCols){
-	  	$('#dimension-picker-highlighted').css('width', highlightedCols + 'em');	
+	  	updateCurrentMatrix('col', highlightedCols);
+	  	$('#dimension-picker-highlighted').css('width', highlightedCols + 'em');
 	  } else if(highlightedRows){
-	  	$('#dimension-picker-highlighted').css('height', highlightedRows + 'em');	
+	  	updateCurrentMatrix('row', highlightedRows);
+	  	$('#dimension-picker-highlighted').css('height', highlightedRows + 'em');
 	  }
 		
 
