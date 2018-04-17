@@ -2,18 +2,14 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
-.dimension-picker-wrapper{
-	font-size: 18px;
-	width: 5em;
-}
-
 .dimension-picker{
+	font-size: 18px;
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
 
-#dimension-picker-mousecatcher{
+.dimension-picker-mousecatcher{
 	width: 20em;
 	height: 20em;
 	position: absolute;
@@ -21,14 +17,14 @@ body{
 	user-select: none;
 }
 
-#dimension-picker-unhighlighted{
+.dimension-picker-unhighlighted{
 	width: 5em;
 	height: 5em;
 	position: relative;
 	background: url(/images/dimension-unhighlighted.png);
 }
 
-#dimension-picker-highlighted{
+.dimension-picker-highlighted{
 	width: 1em;
 	height: 1em;
 	position: absolute;
